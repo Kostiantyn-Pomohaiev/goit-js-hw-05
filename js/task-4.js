@@ -1,8 +1,8 @@
 const getTotalBalanceByGender = (users, gender) => {
-        const selected = users.filter(user => user.gender===gender);
-        const balance = selected.reduce((total, select) => {
+        const balance = users.filter(user => user.gender===gender).reduce((total, select) => {
             return total + select.balance;
           }, 0);
+        // const balance = selected
         return balance;
 }
 
